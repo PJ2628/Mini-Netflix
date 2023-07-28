@@ -1,0 +1,37 @@
+<html>
+    <body>
+      
+        <nav>
+            <img src="assets/lowh.png" class="logo">
+        
+            <div>
+                <button routerLink="/login" routerLinkActive="active">Iniciar sesion</button>
+            </div>
+        </nav>
+
+       
+        <br>
+        <br>
+      
+<div class="card-container"align="center" >
+    <form class="row g-3" >
+    <div class="col-4"  *ngFor="let cuenta of cuentas" [ngValue]="cuenta"  >
+    <div class="card" >
+     
+        <!-- <div class="card-image" style="height: 125px; width: 130px;"><b>{{cuenta.nombre}}</b></div>
+         -->
+         <!-- <div class="card-image" style="height: 125px; width: 130px;" src="{{cuenta.foto}}"> </div> -->
+         
+         <div class="card-image" [ngStyle]="{ 'background-image': 'url(' + cuenta.foto + ')'}"></div>
+        <div class="card-title" >$ {{cuenta.precio}}</div>
+        <div class="card-text"> {{cuenta.descrip}}</div>
+        <a [routerLink]="['/registro',cuenta.idcuenta]" class=" stretched-link"></a>
+      </div>
+  
+    </div>
+   
+  </form>
+  </div>
+<br>
+</body>
+  </html>

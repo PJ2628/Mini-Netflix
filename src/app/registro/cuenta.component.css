@@ -1,0 +1,106 @@
+
+nav{
+    display: flex;
+    align-items:center ;
+    justify-content: space-between;
+    padding: 10px 0;
+    margin-left: 10px;
+}
+
+nav button{
+    border:0;
+    outline: 0;
+    background: rgb(98, 217, 247);
+    color: #fff;
+    padding:7px 20px ;
+    font-size: 12px;
+    font-weight: bolder;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+/*no tocar*/
+
+/*@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');*/
+@media print {
+    body {--webkit-print-color-adjust: exact;}
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(90deg,black,#022a3c) fixed;
+   /* padding:50px;*/
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+}
+
+.card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    
+    
+}
+
+.card{
+    width: 250px;
+    height: auto;
+    position: relative;
+    margin-right: 20%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    padding: 20px;
+    transition: all .3s ease-in;
+    margin-right: 30px;
+    margin-left: 30px;
+   
+}
+.card > *{
+    padding: 10px;
+}
+.card .card-image{
+    height: 150px;
+    width: 150px;
+    border: 5px double #022a3c;
+    border-radius: 50%;
+    background-position: center center;
+    background-size: cover;    
+}
+.card .card-title{
+    padding: 20px 10px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-shadow: 1px 0px 2px #262654;
+}
+/*.card:nth-child(1) .card-image{
+    background-image: url(coding.jpg);
+}
+.card:nth-child(2) .card-image{
+    background-image: url(cooking.jpg);
+}
+.card:nth-child(3) .card-image{
+    background-image: url(cycling.jpg);
+}*/
+.card:hover{
+    background: #e84393;
+    color: #fff;
+    box-shadow: 0px 0px 11px 5px #000000;
+
+}
+
+.card .card-text{
+    line-height: 20px;
+    font-size: 400;
+}

@@ -1,0 +1,22 @@
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+<main>
+ < class="form">
+   <div class="title">
+   <h1 id="title">Nueva Categoria</h1>
+   <p id="description">Por favor llenar todos los campos</p>
+  </div>
+   <form id="survey-form">
+   
+     <label for="nombre" id="name-label" class="uno">Nombre de la Categoria </label>
+     <input type="text" id="nombre" [(ngModel)]="categoria.nombre" name="nombre" placeholder="Enter your name" requiered>
+
+     <p class="uno">Descripcion</p>
+     <textarea id="descrip" class="textarea uno" [(ngModel)]="categoria.descrip" name="descrip" placeholder="Enter your message here..."></textarea>
+
+  
+      
+      <button type="submit" (click)="create()"  id="submit" class="submit uno">Subir Pelicula</button>
+
+   </form>
+  
+</main>

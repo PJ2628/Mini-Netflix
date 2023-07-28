@@ -1,0 +1,109 @@
+<html>
+
+<body>
+    <br>
+    <!-- <div class="container">
+        <form class="row g-3">
+            <div class="col-md-6">
+              <label for="inputEmail4" class="form-label">Correo</label>
+              <input type="email" class="form-control" id="correo" [(ngModel)]="registro.correo" name="correo" required>
+            </div>
+            <div class="col-md-6">
+              <label for="inputPassword4" class="form-label">Contraseña</label>
+              <input type="password" class="form-control" id="contra" [(ngModel)]="registro.contra" name="contra" required>
+            </div>
+            <div class="col-12">
+              <label for="inputAddress" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="nombre" placeholder="" [(ngModel)]="registro.nombre" name="nombre" required>
+            </div>
+            <div class="col-12">
+              <label for="inputAddress2" class="form-label">Dirección</label>
+              <input type="text" class="form-control" id="dir" placeholder="" [(ngModel)]="registro.dir" name="dir" required>
+            </div>
+            <div class="col-md-6">
+              <label for="inputCity" class="form-label">Edad</label>
+              <input type="text" class="form-control" id="edad" [(ngModel)]="registro.edad" name="edad" required>
+            </div> -->
+
+            <!--<div class="col-md-3">
+              <label for="validationDefault05" class="form-label">Cuenta</label>
+              <input type="text" class="form-control" name="cuenta" value="{{registro.cuentatip.idcuenta}}" required>
+            </div>!-->
+
+            <!--<div class="col-md-3">
+              <label for="validationDefault04" class="form-label">Estado</label>
+              <select class="form-select" id="cuenta" [(ngModel)]="registro.cuentatip" name="cuenta" required>
+                <option *ngFor="let cuenta of cuentas" [ngValue]="cuenta">{{cuenta.nombre}}</option>
+              </select>
+            </div> !-->
+
+            <!-- <div class="col-12">
+              <button type="submit" (click)="create()" class="btn btn-primary">Ingresar</button>
+            </div>
+          </form>
+        </div> -->
+
+
+        <br>
+<div class="login-container">
+    <form method="post" class="form-login">
+      <ul class="login-nav">
+        <li class="login-nav__item active">
+            <a >Registro</a>
+        </li>
+        <li class="login-nav__item">
+          <a [routerLink]="['/login']" class="stretched-link">Iniciar sesion</a>
+        </li> 
+      </ul>
+      <label for="login-input-user" class="login__label">
+        Nombre 
+      </label>
+      <!-- <input  id="correo" class="login__input" [(ngModel)]="registro.nombre" type="text" name="correo" /> -->
+      <input  id="nombre" class="login__input" [(ngModel)]="registro.nombre" type="text" name="nombre" />
+      <label for="login-input-password" class="login__label">
+
+        Correo
+      </label>
+      <!-- <input   id="contra" class="login__input" [(ngModel)]="registro.correo" type="password" name="contra" />-->
+      <input   id="correo" class="login__input" [(ngModel)]="registro.correo" type="email" name="correo" /> 
+
+      <label for="login-input-password" class="login__label">
+
+        contrasenia
+      </label>
+      <!-- <input   id="contra" class="login__input" [(ngModel)]="registro.contra" type="password" name="contra" />-->
+      <input   id="contra" class="login__input"[(ngModel)]="registro.contra" type="password" name="contra" /> 
+
+
+      <label for="login-input-password" class="login__label">
+
+        Edad
+      </label>
+      <!-- <input   id="contra" class="login__input" [(ngModel)]="registro.edad" type="password" name="contra" />-->
+      <input   id="edad" class="login__input" [(ngModel)]="registro.edad" type="text" name="edad" /> 
+
+
+      <label for="login-input-password" class="login__label">
+
+        Direccion
+      </label>
+      <!-- <input   id="contra" class="login__input" [(ngModel)]="registro.dir" type="password" name="contra" />-->
+      <input   id="dir" class="login__input"[(ngModel)]="registro.dir" type="text" name="dir" /> 
+
+      
+      <label for="login-sign-up" class="login__label--checkbox">
+        <input  id="login-sign-up" type="checkbox" class="login__input--checkbox" />
+        Keep me Signed in
+      </label>
+      <button (click)="create()" class="login__submit" >Registrarme</button> 
+    </form>
+    <a href="#" class="login__forgot">Forgot Password?</a>
+  </div>
+  <br>
+  <br>
+
+<br>
+<!--<button (click)="create()">crear</button>!-->
+  <br>
+</body>
+</html>

@@ -1,0 +1,48 @@
+
+
+    <div class="video-player-wrapper">
+ 
+    <vg-player>
+      <vg-overlay-play></vg-overlay-play>
+      <vg-buffering></vg-buffering>
+      <vg-scrub-bar>
+        <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+        <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+      </vg-scrub-bar>
+      <vg-controls>
+        <vg-play-pause></vg-play-pause>
+        <vg-playback-button></vg-playback-button>
+        <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+        <vg-scrub-bar style="pointer-events: none;"></vg-scrub-bar>
+        <vg-time-display vgProperty="left" vgFormat="mm:ss"></vg-time-display>
+        <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+        <vg-track-selector></vg-track-selector>
+        <vg-mute></vg-mute>
+        <vg-volume></vg-volume>
+        <vg-fullscreen></vg-fullscreen>
+      </vg-controls>
+      <video [vgMedia]="$any(media)" #media id="singleVideo" preload="auto" crossorigin>
+        
+        <source src="http://localhost:8080/api/pelicula/video/{{pelis}}" type="video/mp4"> -->
+        <!-- <source src="{{urlEndPointPe}}" type="video/mp4">
+      </video>
+    </vg-player>
+  </div>
+  <br>
+<p>{{pelis}}</p>
+   <!-- <vg-player>
+    <video [vgMedia]="media" #media id="singleVideo" preload="auto" controls>
+      
+       <source src="htts://m.youtube.com/watch?v=EdQBMA_DXWA" type="video/youtube">
+    </video>
+</vg-player>   -->
+
+<!-- <iframe width="600" height="480" src="https://doodstream.com/d/bc1vyd4ijuf4" scrolling="no" frameborder="0" allowfullscreen="true"></iframe> -->
+
+
+<!-- <vg-player>
+  <video [vgMedia]="media" #media id="singleVideo" preload="auto" controls>
+    
+     <source src="https://sblona.com/j15gk8rv8r4y.html" type="video/html"> 
+  </video>
+</vg-player>  -->

@@ -1,0 +1,112 @@
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+<main>
+ < class="form">
+   <div class="title">
+   <h1 id="title">Nueva Pelicula</h1>
+   <p id="description">Por favor llenar todos los campos</p>
+  </div>
+   <form id="survey-form">
+   
+     <label for="nombre" id="name-label" class="uno">Nombre de la Pelicula </label>
+     <input type="text" id="nombre" [(ngModel)]="pelicula.nombre" name="nombre" placeholder="Enter your name" requiered>
+
+     <label for="dropdown" id="dropdown-idioma" class="uno">Idioma</label>
+     <select [(ngModel)]="pelicula.idioma" id="dropdown-idioma" name="dropdown-idioma">
+       <option disable selected value>Selecciona el Idioma</option>
+       <option value="Español (Latino)">Español (Latino)</option>
+       <option value="Ingles (Subtitulado)">Ingles (Subtitulado)</option>
+     </select>
+
+     <div align="center" class="mt-3">
+        <p class="uno">Esta pelicula es para niños?</p>
+        <label for="btn" id="btn-label" class="uno">Para Adultos </label>
+        <input type="radio" [value]="false" [(ngModel)]="pelicula.kidapro" name="kidapro-false" id="kidapro-alse"  class="input" class="input" checked>
+        <label for="btn" id="btn-label" class="uno">Para Niños</label>
+        <input type="radio" [value]="true" [(ngModel)]="pelicula.kidapro" name="kidapro-true" id="kidapro-true"  class="input" class="input">
+    </div>
+
+    <label for="dropdown" id="dropdown-label" class="uno">Cual es la categoria de la pelicula?</label>
+    <select [(ngModel)]="catefront" id="dropdown-categoria" name="rol">
+      <option disable selected value>selecciona la categoria</option>
+      <option   *ngFor="let categoria of categorias" value="{{categoria.idcate}}">{{categoria.nombre}}</option>
+      <!-- <option value="student">Student</option> -->
+    </select>
+
+
+     <!-- <label for="email" id="email-label" class="uno">description</label>
+     <input type="email" id="email" placeholder="Enter your email"  requiered> -->
+
+     <label for="actores" id="actores-label" class="uno">Actores</label>
+     <input type="text" id="actores" [(ngModel)]="pelicula.actores" placeholder="ingresa los actores" name="actores"  requiered>
+
+     <label for="duracion" id="duracion-label" class="uno">Duracion</label>
+     <input type="text" id="duracion"  [(ngModel)]="pelicula.duracion" placeholder="ingresa la duracion" name="duracion" requiered>
+
+     <label for="imagen" id="imagen-label" class="uno">Imagen</label>
+     <input type="text" id="imagen" [(ngModel)]="pelicula.imagen" placeholder="ingresa el link de la imagen" name="imagen" requiered>
+
+     <p class="uno">Descripcion</p>
+     <textarea id="descrip" class="textarea uno" [(ngModel)]="pelicula.descrip" name="descrip" placeholder="Enter your message here..."></textarea>
+
+     
+    <div align="center" class="mt-2">
+        <label for="formFileLg" class="uno">CARGAR PELICULA</label>
+        <input class="form-control form-control-lg" (change)="seleccionarVideo($event)" id="formFileLg" type="file">
+      </div>
+
+    <div align="center" class="mt-3">
+        <p class="uno">Esta pelicula estara disponible?</p>
+        <label for="btn" id="btn-peli-true" class="uno">disponible </label>
+        <input type="radio" name="user-peli-true" [value]="true" [(ngModel)]="pelicula.enabl" class="input"  checked>
+        <label for="btn" id="btn-peli-true" class="uno">deshabilitado</label>
+        <input type="radio" name="user-peli-false" [value]="false" [(ngModel)]="pelicula.enabl" class="input" >
+    </div>
+
+      
+      <button type="submit" (click)="create()"  id="submit" class="submit uno">Subir Pelicula</button>
+
+
+     <!-- <label for="age" id="number-label" class="uno">Age (optional)</label>
+     <input type="number" id="number" placeholder="Enter your age">
+     
+     <label for="dropdown" id="dropdown-label" class="uno">Which option best describes your current role?</label>
+     <select id="dropdown" name="rol">
+       <option disable selected value>Select your current rol</option>
+       <option value="student">Student</option>
+       <option value="job">Full time job</option>
+       <option value="freelancer">Freelancer</option>
+       <option value="hunting">Looking for a job</option>
+     </select> -->
+
+     <!-- <div>
+        <p class="uno">Would you recommend our Agency to a friend?</p>
+        <label for="btn" id="btn-label" class="uno">Definitely</label>
+        <input type="radio" name="user-recommend" value="definitely" class="input" checked>
+        <label for="btn" id="btn-label" class="uno">Maybe</label>
+        <input type="radio" name="user-recommend" value="maybe" class="input">
+        <label for="btn" id="btn-label" class="uno">Not sure</label>
+          <input type="radio" name="user-recommend" value="not-sure" class="input"></div> -->
+    
+       <!-- <p class="uno">What would you like to see improved? (Check all that apply)</p>
+     <div class="check">
+     <label class="uno">
+     <input name="prefer" type="checkbox" value="front-end projects" class="checkbox-input">Front-end projects</label>
+     <label class="uno">
+     <input name="prefer" type="checkbox" value="back-end projects" class="checkbox-input">Back-end projects</label>
+
+     <label class="uno">
+   <input name="prefer" type="checkbox" value="social-media" class="checkbox-input">Social media (Marketing)</label>
+     <label class="uno">
+   <input name="prefer" type="checkbox" value="video-games" class="checkbox-input">Video Games Development</label>
+
+     <label class="uno">
+   <input name="prefer" type="checkbox" value="ui-ux-design" class="checkbox-input">UI/UX Design Tutorials++</label>
+       <label class="uno">
+   <input name="prefer" type="checkbox" value="other" class="checkbox-input">Other (send us a message)</label>
+     </div> -->
+     
+
+     
+   </form>
+  
+</main>
