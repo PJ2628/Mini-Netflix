@@ -3,6 +3,8 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Usuario } from './usuario';
 
+//para  decoficiar el token
+
 @Injectable({
   providedIn: 'root'
 })
